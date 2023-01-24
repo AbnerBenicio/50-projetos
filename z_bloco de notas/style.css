@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0;
+    background-image: url("https://http2.mlstatic.com/D_NQ_NP_636597-MLB28869297448_122018-O.jpg");
+    overflow-y: scroll;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95%;
+    width: 50%;
+    margin: 40px 0;
+    background-color: transparent;
+}
+
+h2{
+    color: #fff;
+    font-size: 45px;
+}
+
+.instru {
+    background-color: rgb(90, 226, 90);
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    height: 26px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+dialog{
+    border: 0;
+    border-radius: .5rem;
+    background-color: rgb(90, 226, 90);
+    color: #fff;
+    width: 50%;
+}
+
+.notas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200%;
+    margin: 60px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+}
+
+.adic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.remov{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+button#add{
+    margin-top: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(90, 226, 90);
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.btnC{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(90, 226, 90);
+    color: #fff;
+}
+
+h3{
+    margin-top: -10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.campos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    margin-left: 15px;
+    margin: 5px;
+}
+
+
+input{
+    width: 35%;
+    border-radius: 10px;
+    height: 25px;
+    border: 0;
+    background-color: rgb(129, 248, 129);
+    font-size: medium;
+    color: rgb(43, 41, 41);
+
+}
+
+.marcador{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+}
+
+input:focus{
+    outline: 0;
+}
+

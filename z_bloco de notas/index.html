@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de coisas</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <h2>Lista Interativa</h2>
+        <button class="instru">Instruções</button>
+        <dialog>
+            <h3>Instruções</h2>
+            <p> Olá. Bem-vindo(a) à Lista Interativa, um site que permite ao usuário adicionar e remover elementos de uma lista.
+            </p>
+            <p>- Ao clicar no botão "+" uma nova linha será adicionada a lista;</p>
+            <p>- Ao clicar no botão "x" a linha ao lado será excluída.</p>
+            <button class="confirm">Ok</button>
+        </dialog>
+        <div class="botoes">
+            <div class="adic">
+                <button class="btn" id="add">
+                    <i class="fas fa-add"></i>
+                </button>
+                <label for="">Adicionar Linha</label>
+            </div>
+
+        </div>
+
+        <div class="notas">
+            <h3>Anotações</h3>
+            <div class="campos principal">
+                <input type="text">
+                
+                <div class="marcador">
+                    <input type="checkbox">
+                    <button class="btnC" id="primeiro">
+                        <i class="fas fa-close"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

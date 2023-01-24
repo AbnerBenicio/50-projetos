@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0;
+    overflow-y: scroll;
+    background-image: url("https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.logo p{
+    color: #fff;
+    font-size: large;
+    width: 40%;
+    margin: 5px;
+}
+
+.logo img{
+    height: 30%;
+    width: 30%;
+    background-size: cover;
+}
+
+.bloco1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    margin: 30px;
+    flex-wrap: wrap; /*flex-wrap: wrap já prepara para mobile, na maioria dos casos; tem que estar no "pai" do que eu quero alinhar*/
+}
+
+.p1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 200px;
+    width: 350px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 4px;
+}
+
+.p1:hover{
+    height: 210px;
+    width: 360px;
+    background: rgba(199, 191, 191, 0.2); /*hover é o que acontece se passar o mouse por cima*/
+}
+
+.p1.ativo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 490px;
+    width: 370px;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 4px;
+}
+
+.p1 .perfil{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.texto{
+    color: #fff;
+    font-size: 0;
+}
+
+.p1.ativo .texto{
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 90%;
+    height: 70%;
+    transition: 0.12s;
+    font-size: medium;
+}
+
+.p1.ativo img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    
+}
+
+.p1 img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    transition: 0.3s ease;
+}

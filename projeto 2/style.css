@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --line-border-fill:  #383636;
+    --line-border-empty:  #fff;
+}
+
+body{
+    background-color: #6db3ec;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.titulo{
+    position: absolute;
+    top: 25%;
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container{
+    text-align: center;
+    position: absolute;
+    bottom: 37%;
+}
+
+.progress-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 700px;
+}
+
+.progress-container::before{
+    content: ''; /*Usar quando tiver before*/
+    background-color:var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 00.4s ease;
+
+}
+
+.circle{
+    background-color: #fff;
+    color: #999;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #999;
+    transition: 4s ease;
+}
+
+.circle.active{
+    border-color: var(--line-border-fill);
+    transition: 2s;
+    background-color: rgb(17, 128, 202);
+    color: var(--line-border-fill);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    background-color: var(--line-border-fill);
+    color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active{
+    transform: scale(0.98);
+} /*efeitinho no click*/
+
+.btn:focus{
+    outline: 0;
+} /*efeitinho no click*/
+
+.btn:disabled{
+    background-color: #999;
+    cursor:not-allowed;
+}

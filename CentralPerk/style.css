@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    background-image: url("https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg");
+    overflow-y: scroll;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    position: relative;
+    max-height: 95%;
+    width: 90vh;
+    background-color: burlywood;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5%;
+    margin: 100px 0; /*deixar com espaçamento em cima e em baixo; o 0 é em relação aos lados*/
+}
+
+.parteSup{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem{
+    position: relative;
+    top: 15px;
+}
+
+.bar{
+    position: relative;
+    height: 4px;
+    width: 60vh;
+    top: 10px;
+    border-radius: 10%;
+    background-color: brown;
+}
+
+.opC1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/* espaça itens de forma igual */
+    margin: 18px;
+    padding: 10px;
+}
