@@ -65,32 +65,38 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: red;
+    background-color: blue;
 }
 
 /*MAIN*/
 .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     max-width: 1440px;
     height: calc(100vh-132px);
     margin: 0 auto;
-    padding: 0 30px 30px;
+    margin: 0 30px 30px;
+}
+
+.container .img-sonic {
+    max-width: 24%;
 }
 
 .info .titulo {
-    max-width: 650px;
+    max-width: 600px;
 }
 
 .info p {
-    width: 90%;
+    width: 800px;
     font-size: 18px;
-    margin: 20px 0;
+    padding: 0 0 30px;
+    
 }
 
 .info button {
     padding: 15px;
-    background-color: red;
+    background-color: blue;
     font-size: 16px;
     border: none;
     border-radius: 50px;
@@ -159,8 +165,8 @@ ul li a:hover {
         flex-wrap: wrap;
     }
 
-    .container .img-mario {
-        max-width: 50%;
+    .container .img-sonic {
+        max-width: 150px;
     }
 
     .container .info {
@@ -171,6 +177,7 @@ ul li a:hover {
 
     .container p {
         text-align: center;
+        max-width: 300px;
     }
 }
 
@@ -182,7 +189,7 @@ ul li a:hover {
     }
 
     .container .titulo {
-        max-width: 75%;
+        max-width: 60%;
     }
 
     .modal .fechar-modal {
