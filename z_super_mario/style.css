@@ -101,3 +101,41 @@ ul li a:hover {
 .info button:hover {
     transform: scale(1.1);
 }
+
+.modal {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749);
+    visibility: hidden;
+}
+
+.modal.aberto {
+    visibility: visible;
+}
+
+.modal .content-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.modal .fechar-modal {
+    text-align: center;
+    background-color: #000;
+    width: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal #video {
+    border: none;
+    border-radius: 10px;
+}
