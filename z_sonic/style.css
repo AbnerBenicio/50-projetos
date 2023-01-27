@@ -9,10 +9,14 @@
     color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*BODY/FUNDO*/
 body {
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
     background-color: #000;
 }
 
@@ -80,7 +84,7 @@ ul li a:hover {
 }
 
 .container .img-sonic {
-    max-width: 24%;
+    max-width: 23%;
 }
 
 .info .titulo {
@@ -108,6 +112,57 @@ ul li a:hover {
 .info button:hover {
     transform: scale(1.1);
 }
+
+/**/
+.divisao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 60px 0;
+}
+
+.barra {
+    width: 400px;
+    height: 2px;
+    background-color: #fff;
+}
+
+/**/
+#detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    gap: 10px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #000;
+}
+
+#detalhes .netflix {
+    width: 200px;
+    border-radius: 20px;
+}
+
+#detalhes #assistir {
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(255, 0, 0);
+    font-size: 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+#detalhes #assistir:hover {
+    transform: scale(1.1);
+}
+
 
 .modal {
     display: flex;
@@ -179,13 +234,21 @@ ul li a:hover {
         text-align: center;
         max-width: 300px;
     }
+
+    .divisao .barra{
+        width: 200px;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 540px) {
     .header {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
+    }
+
+    ul li a {
+        font-size: 18px;
     }
 
     .container .titulo {
@@ -200,5 +263,30 @@ ul li a:hover {
     .modal #video {
         width: 300px;
         height: 169px;
+    }
+
+    .divisao .barra{
+        width: 100px;
+    }
+}
+
+@media (max-width: 300px) {
+    ul li a {
+        font-size: 10px;
+    }
+
+    .container p {
+        text-align: center;
+        max-width: 200px;
+        font-size: 15px;
+    }
+
+    .divisao .barra{
+        width: 50px;
+    }
+
+    #detalhes {
+        max-width: 200px;
+        font-size: 15px;
     }
 }
