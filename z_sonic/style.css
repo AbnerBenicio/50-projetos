@@ -114,32 +114,31 @@ ul li a:hover {
 }
 
 /**/
-.divisao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 60px 0;
-}
-
-.divisao .barra {
-    width: 70vh;
-    height: 2px;
-    background-color: #fff;
-}
-
-/**/
 #detalhes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vh;
+    width: 50vw;
     height: 100vh;
     gap: 10px;
     font-size: 18px;
     text-align: center;
     border-radius: 10px;
     margin: 0 auto 30px;
+}
+
+.divisao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 80px 0 10px;
+}
+
+.divisao .barra {
+    width: 40vw;
+    height: 2px;
+    background-color: #fff;
 }
 
 .fundo {
@@ -245,12 +244,9 @@ ul li a:hover {
     }
 
     #detalhes {
-        width: 40vh;
+        width: 70vw;
     }
 
-    .divisao .barra{
-        width: 30vh;
-    }
 }
 
 @media (max-width: 540px) {
