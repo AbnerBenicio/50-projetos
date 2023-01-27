@@ -122,7 +122,7 @@ ul li a:hover {
     margin: 60px 0;
 }
 
-.barra {
+.divisao .barra {
     width: 70vh;
     height: 2px;
     background-color: #fff;
@@ -247,6 +247,10 @@ ul li a:hover {
     #detalhes {
         width: 40vh;
     }
+
+    .divisao .barra{
+        width: 30vh;
+    }
 }
 
 @media (max-width: 540px) {
@@ -275,7 +279,7 @@ ul li a:hover {
     }
 
     .divisao .barra{
-        width: 100px;
+        width: 85px;
     }
 }
 
@@ -291,7 +295,7 @@ ul li a:hover {
     }
 
     .divisao .barra{
-        width: 50px;
+        width: 20px;
     }
 
     #detalhes {
