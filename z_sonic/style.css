@@ -147,8 +147,10 @@ ul li a:hover {
     align-items: center;
     background-color: #000;
     height: auto;
-    gap: 10px;
+    margin: auto;
+    gap: 20px;
     padding: 20px;
+    border-radius: 10px;
 }
 
 #detalhes .netflix {
