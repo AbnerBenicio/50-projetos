@@ -207,9 +207,8 @@ bIgual.addEventListener ("click", () => {
 })
 
 function operacao () {
-    console.log(valor.textContent)
     resultado = eval(valor.textContent)
-    result.innerText = eval(valor.textContent)
+    result.innerText = resultado
 }
 
 
