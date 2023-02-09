@@ -16,6 +16,10 @@
     border-radius: 5px;
 }
 
+#prev-result {
+    display: none;
+}
+
 .input {
     display: flex;
     justify-content: right;
