@@ -292,19 +292,31 @@ bParenteses1.addEventListener("click", () => {
   if (result.textContent == "0") {
     result.innerText = "(";
     valor.innerText = "(";
-  } else {
+    pseudo.innerText = "(";
+  } else if ((pseudo.textContent != "zera")) {
     result.innerText = result.textContent + "(";
     valor.innerText = valor.textContent + "(";
+    pseudo.innerText = pseudo.textContent + "(";
+  } else {
+    result.innerText = "(";
+    valor.innerText = "(";
+    pseudo.innerText = "(";
   }
 });
 
 bParenteses2.addEventListener("click", () => {
   if (result.textContent == "0") {
-    result.innerText = ")";
-    valor.innerText = ")";
-  } else {
+    result.innerText = "(";
+    valor.innerText = "(";
+    pseudo.innerText = "(";
+  } else if ((pseudo.textContent != "zera")) {
     result.innerText = result.textContent + ")";
     valor.innerText = valor.textContent + ")";
+    pseudo.innerText = pseudo.textContent + ")";
+  } else {
+    result.innerText = "(";
+    valor.innerText = "(";
+    pseudo.innerText = "(";
   }
 });
 
