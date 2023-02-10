@@ -32,6 +32,7 @@ b0.addEventListener("click", () => {
     valor.innerText = "0";
     pseudo.innerText = "0";
   } else if (pseudo.textContent != "p") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "0";
       valor.innerText = valor.textContent + "*0";
@@ -39,7 +40,7 @@ b0.addEventListener("click", () => {
     } else {
       result.innerText = result.textContent + "0";
       valor.innerText = valor.textContent + "0";
-      pseudo.innerText = pseudo.textContent + "6";
+      pseudo.innerText = pseudo.textContent + "0";
     }
   } else {
     result.innerText = "0";
@@ -372,10 +373,17 @@ bParenteses1.addEventListener("click", () => {
     valor.innerText = "(";
     pseudo.innerText = "(";
   } else if (pseudo.textContent != "zera") {
-    if (pseudo.textContent != "0") result.innerText = result.textContent + "(";
-    valor.innerText = valor.textContent + "*(";
-    pseudo.innerText = pseudo.textContent + "(";
-    pseudo.textContent = "0";
+    if (pseudo.textContent != "0") {
+      result.innerText = result.textContent + "(";
+      valor.innerText = valor.textContent + "*(";
+      pseudo.innerText = pseudo.textContent + "(";
+      pseudo.textContent = "0";
+    } else {
+      result.innerText = result.textContent + "(";
+      valor.innerText = valor.textContent + "(";
+      pseudo.innerText = pseudo.textContent + "(";
+      pseudo.textContent = "0";
+    }
   } else {
     result.innerText = "(";
     valor.innerText = "(";
