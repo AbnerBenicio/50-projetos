@@ -1,6 +1,7 @@
 const result = document.getElementById("resultado");
 const valor = document.getElementById("prev-result");
 const pseudo = document.getElementById("pseudo");
+const contador = document.getElementById("contador");
 const erro = document.querySelector(".fundo");
 const b0 = document.getElementById("0");
 const b1 = document.getElementById("1");
@@ -30,7 +31,7 @@ b0.addEventListener("click", () => {
     result.innerText = "0";
     valor.innerText = "0";
     pseudo.innerText = "0";
-  } else if ((pseudo.textContent != "p")) {
+  } else if (pseudo.textContent != "p") {
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "0";
       valor.innerText = valor.textContent + "*0";
@@ -38,7 +39,7 @@ b0.addEventListener("click", () => {
     } else {
       result.innerText = result.textContent + "0";
       valor.innerText = valor.textContent + "0";
-      pseudo.innerText = pseudo.textContent + "0";
+      pseudo.innerText = pseudo.textContent + "6";
     }
   } else {
     result.innerText = "0";
@@ -52,7 +53,8 @@ b1.addEventListener("click", () => {
     result.innerText = "1";
     valor.innerText = "1";
     pseudo.innerText = "1";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "1";
       valor.innerText = valor.textContent + "*1";
@@ -74,7 +76,8 @@ b2.addEventListener("click", () => {
     result.innerText = "2";
     valor.innerText = "2";
     pseudo.innerText = "2";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "2";
       valor.innerText = valor.textContent + "*2";
@@ -96,7 +99,8 @@ b3.addEventListener("click", () => {
     result.innerText = "3";
     valor.innerText = "3";
     pseudo.innerText = "3";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "3";
       valor.innerText = valor.textContent + "*3";
@@ -118,7 +122,8 @@ b4.addEventListener("click", () => {
     result.innerText = "4";
     valor.innerText = "4";
     pseudo.innerText = "4";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "4";
       valor.innerText = valor.textContent + "*4";
@@ -140,7 +145,8 @@ b5.addEventListener("click", () => {
     result.innerText = "5";
     valor.innerText = "5";
     pseudo.innerText = "5";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "5";
       valor.innerText = valor.textContent + "*5";
@@ -162,7 +168,8 @@ b6.addEventListener("click", () => {
     result.innerText = "6";
     valor.innerText = "6";
     pseudo.innerText = "6";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "6";
       valor.innerText = valor.textContent + "*6";
@@ -184,7 +191,8 @@ b7.addEventListener("click", () => {
     result.innerText = "7";
     valor.innerText = "7";
     pseudo.innerText = "7";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "7";
       valor.innerText = valor.textContent + "*7";
@@ -206,7 +214,8 @@ b8.addEventListener("click", () => {
     result.innerText = "8";
     valor.innerText = "8";
     pseudo.innerText = "8";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "8";
       valor.innerText = valor.textContent + "*8";
@@ -228,7 +237,8 @@ b9.addEventListener("click", () => {
     result.innerText = "9";
     valor.innerText = "9";
     pseudo.innerText = "9";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
+    let str = valor.textContent;
     if (valor.textContent.charAt(str.length - 1) == ")") {
       result.innerText = result.textContent + "9";
       valor.innerText = valor.textContent + "*9";
@@ -246,10 +256,19 @@ b9.addEventListener("click", () => {
 });
 
 bPonto.addEventListener("click", () => {
-  if (result.textContent == "0") {
-    alert("Digite um número antes de colocar o ponto");
-  } else {
-    if (!pseudo.textContent.includes(".")) {
+  if (!pseudo.textContent.includes(".")) {
+    if (pseudo.textContent == "0") {
+      let str = valor.textContent;
+      if (valor.textContent.charAt(str.length - 1) == ")") {
+        valor.innerText = valor.textContent + "*0.";
+        result.innerText = result.textContent + ".";
+        pseudo.innerText = pseudo.textContent + ".";
+      } else {
+        valor.innerText = valor.textContent + "0.";
+        result.innerText = result.textContent + ".";
+        pseudo.innerText = pseudo.textContent + ".";
+      }
+    } else {
       valor.innerText = valor.textContent + ".";
       result.innerText = result.textContent + ".";
       pseudo.innerText = pseudo.textContent + ".";
@@ -352,9 +371,8 @@ bParenteses1.addEventListener("click", () => {
     result.innerText = "(";
     valor.innerText = "(";
     pseudo.innerText = "(";
-  } else if ((pseudo.textContent != "zera")) {
-    if (pseudo.textContent != "0")
-    result.innerText = result.textContent + "(";
+  } else if (pseudo.textContent != "zera") {
+    if (pseudo.textContent != "0") result.innerText = result.textContent + "(";
     valor.innerText = valor.textContent + "*(";
     pseudo.innerText = pseudo.textContent + "(";
     pseudo.textContent = "0";
@@ -370,7 +388,7 @@ bParenteses2.addEventListener("click", () => {
     result.innerText = "(";
     valor.innerText = "(";
     pseudo.innerText = "(";
-  } else if ((pseudo.textContent != "zera")) {
+  } else if (pseudo.textContent != "zera") {
     result.innerText = result.textContent + ")";
     valor.innerText = valor.textContent + ")";
     pseudo.innerText = pseudo.textContent + ")";
