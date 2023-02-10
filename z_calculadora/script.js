@@ -1,5 +1,6 @@
 const result = document.getElementById("resultado");
 const valor = document.getElementById("prev-result");
+const erro = document.querySelector(".fundo")
 const b0 = document.getElementById("0");
 const b1 = document.getElementById("1");
 const b2 = document.getElementById("2");
@@ -206,6 +207,26 @@ bIgual.addEventListener("click", () => {
 });
 
 function operacao() {
-  resultado = eval(valor.textContent);
-  result.innerText = resultado;
+  try {
+    resultado = eval(valor.textContent);
+    valor.innerText = resultado
+    result.innerText = resultado;
+  } catch (err) {
+    setTimeout(() => {
+        erro.classList.remove("ativo")
+    }, 2000);
+    erro.classList.add("ativo")
+    if (typeof resultado !== "undefined") {
+        result.innerText = resultado
+        valor.innerText = resultado
+    } else {
+        result.innerText = "0"
+        valor.innerText = "0"
+    }
+    
+  }
 }
+
+erro.addEventListener("click", () => {
+    erro.classList.remove("ativo")
+})
