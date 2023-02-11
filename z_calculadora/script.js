@@ -262,18 +262,24 @@ bPonto.addEventListener("click", () => {
       let str = valor.textContent;
       if (valor.textContent.charAt(str.length - 1) == ")") {
         valor.innerText = valor.textContent + "*0.";
-        result.innerText = result.textContent + ".";
+        result.innerText = result.textContent + "0.";
         pseudo.innerText = pseudo.textContent + ".";
       } else {
         valor.innerText = valor.textContent + "0.";
-        result.innerText = result.textContent + ".";
+        result.innerText = result.textContent + "0.";
         pseudo.innerText = pseudo.textContent + ".";
       }
-    } else {
+    } else if (pseudo.textContent != "zera") {
       valor.innerText = valor.textContent + ".";
       result.innerText = result.textContent + ".";
       pseudo.innerText = pseudo.textContent + ".";
+    } else {
+      valor.innerText = "0.";
+      result.innerText = "0.";
+      pseudo.innerText = ".";
     }
+
+    console.log(valor.textContent);
   }
 });
 
