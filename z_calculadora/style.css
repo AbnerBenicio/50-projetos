@@ -80,13 +80,19 @@ body {
 button {
   background-color: #222222;
   color: #fff;
-  width: 20%;
-  height: 50px;
+  width: 16%;
+  height: 56px;
   margin: 5px 5px;
-  border-radius: 5px;
-  border-bottom: 5px solid #000;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
+
+button:active {
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.8);
+}
+
 
 .numeros
   button:not(
@@ -104,4 +110,12 @@ button {
 
 .numeros button#igual {
   background-color: rgb(27, 199, 4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 36%;
+  border-radius: 9999px;
+}
+
+.numeros button#parenteses1, .numeros button#parenteses2 {
+  width: 46%;
+  border-radius: 9999px;
 }
