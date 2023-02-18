@@ -23,8 +23,21 @@ const bReset = document.getElementById("C");
 const bParenteses1 = document.getElementById("parenteses1");
 const bParenteses2 = document.getElementById("parenteses2");
 const bPorcent = document.getElementById("porcentagem");
+const apaga = document.getElementById("apaga")
 
 let resultado;
+
+apaga.addEventListener("click", () => {
+  result.innerText = result.textContent.slice(0, (result.textContent.length - 1));
+  if (valor.textContent.charAt(valor.textContent.length - 2) == "*") {
+    valor.innerText = valor.textContent.slice(0, (valor.textContent.length - 2));
+  } else {
+    valor.innerText = valor.textContent.slice(0, (valor.textContent.length - 1));
+  }
+  pseudo.innerText = pseudo.textContent.slice(0, (pseudo.textContent.length - 1));
+  console.log(pseudo.textContent)
+  console.log(valor.textContent)
+})
 
 b0.addEventListener("click", () => {
   if (result.textContent == "0") {
@@ -32,8 +45,7 @@ b0.addEventListener("click", () => {
     valor.innerText = "0";
     pseudo.innerText = "0";
   } else if (pseudo.textContent != "p") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
       result.innerText = result.textContent + "0";
       valor.innerText = valor.textContent + "*0";
       pseudo.innerText = pseudo.textContent + "0";
@@ -55,8 +67,7 @@ b1.addEventListener("click", () => {
     valor.innerText = "1";
     pseudo.innerText = "1";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
       result.innerText = result.textContent + "1";
       valor.innerText = valor.textContent + "*1";
       pseudo.innerText = pseudo.textContent + "1";
@@ -78,8 +89,7 @@ b2.addEventListener("click", () => {
     valor.innerText = "2";
     pseudo.innerText = "2";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
       result.innerText = result.textContent + "2";
       valor.innerText = valor.textContent + "*2";
       pseudo.innerText = pseudo.textContent + "2";
@@ -101,8 +111,7 @@ b3.addEventListener("click", () => {
     valor.innerText = "3";
     pseudo.innerText = "3";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
       result.innerText = result.textContent + "3";
       valor.innerText = valor.textContent + "*3";
       pseudo.innerText = pseudo.textContent + "3";
@@ -124,9 +133,8 @@ b4.addEventListener("click", () => {
     valor.innerText = "4";
     pseudo.innerText = "4";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
-      result.innerText = result.textContent + "4";
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
+      result.innerText = result.textContent + " 4";
       valor.innerText = valor.textContent + "*4";
       pseudo.innerText = pseudo.textContent + "4";
     } else {
@@ -147,9 +155,8 @@ b5.addEventListener("click", () => {
     valor.innerText = "5";
     pseudo.innerText = "5";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
-      result.innerText = result.textContent + "5";
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
+      result.innerText = result.textContent + " 5";
       valor.innerText = valor.textContent + "*5";
       pseudo.innerText = pseudo.textContent + "5";
     } else {
@@ -170,8 +177,7 @@ b6.addEventListener("click", () => {
     valor.innerText = "6";
     pseudo.innerText = "6";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
       result.innerText = result.textContent + "6";
       valor.innerText = valor.textContent + "*6";
       pseudo.innerText = pseudo.textContent + "6";
@@ -193,10 +199,9 @@ b7.addEventListener("click", () => {
     valor.innerText = "7";
     pseudo.innerText = "7";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
       result.innerText = result.textContent + "7";
-      valor.innerText = valor.textContent + "*7";
+      valor.innerText = valor.textContent + "* 7";
       pseudo.innerText = pseudo.textContent + "7";
     } else {
       result.innerText = result.textContent + "7";
@@ -216,9 +221,8 @@ b8.addEventListener("click", () => {
     valor.innerText = "8";
     pseudo.innerText = "8";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
-      result.innerText = result.textContent + "8";
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
+      result.innerText = result.textContent + " 8";
       valor.innerText = valor.textContent + "*8";
       pseudo.innerText = pseudo.textContent + "8";
     } else {
@@ -239,9 +243,8 @@ b9.addEventListener("click", () => {
     valor.innerText = "9";
     pseudo.innerText = "9";
   } else if (pseudo.textContent != "zera") {
-    let str = valor.textContent;
-    if (valor.textContent.charAt(str.length - 1) == ")") {
-      result.innerText = result.textContent + "9";
+    if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
+      result.innerText = result.textContent + " 9";
       valor.innerText = valor.textContent + "*9";
       pseudo.innerText = pseudo.textContent + "9";
     } else {
@@ -257,10 +260,21 @@ b9.addEventListener("click", () => {
 });
 
 bPonto.addEventListener("click", () => {
+  if (pseudo.textContent == "") {
+    let contMais = valor.textContent.lastIndexOf("+")
+    let contMenos = valor.textContent.lastIndexOf("-")
+    let contMulti = valor.textContent.lastIndexOf("*")
+    let contDiv = valor.textContent.lastIndexOf("/")
+    let contParentes1 = valor.textContent.lastIndexOf("(")
+    let idxMax = Math.max(contMais, contMenos, contMulti, contDiv, contParentes1)
+    console.log(idxMax)
+    pseudo.innerText = valor.textContent.slice((idxMax + 1))
+    console.log(pseudo.textContent)
+  }
+
   if (!pseudo.textContent.includes(".")) {
     if (pseudo.textContent == "0") {
-      let str = valor.textContent;
-      if (valor.textContent.charAt(str.length - 1) == ")") {
+      if (valor.textContent.charAt(valor.textContent.length - 1) == ")") {
         valor.innerText = valor.textContent + "*0.";
         result.innerText = result.textContent + "0.";
         pseudo.innerText = pseudo.textContent + ".";
@@ -278,8 +292,6 @@ bPonto.addEventListener("click", () => {
       result.innerText = "0.";
       pseudo.innerText = ".";
     }
-
-    console.log(valor.textContent);
   }
 });
 
