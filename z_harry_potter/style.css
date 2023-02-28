@@ -51,10 +51,11 @@ body{
 .bloco1{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     width: 85%;
-    margin: 30px;
     flex-wrap: wrap; /*flex-wrap: wrap já prepara para mobile, na maioria dos casos; tem que estar no "pai" do que eu quero alinhar*/
+    /* background-color: aqua; */
 }
 
 .p1{
@@ -72,7 +73,7 @@ body{
     color: #fff;
     cursor: pointer;
     transition: 0.3s ease;
-    margin: 4px;
+    margin: 5px;
 }
 
 .p1:hover{
@@ -129,4 +130,11 @@ body{
     border-radius: 50%;
     background-size: cover;
     transition: 0.3s ease;
+}
+
+@media (max-width: 1199px) AND (min-width: 520px){
+
+    .bloco1 {
+        flex-direction: column;
+    }
 }
